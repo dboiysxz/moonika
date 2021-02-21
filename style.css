@@ -10,17 +10,23 @@ body {
     width: 90%;
 }
 
-p {
+span {
+    list-style: none;
     font-size: 46px;
     font-family: Helvetica, Arial, sans-serif;
-    word-spacing: 8vw;
     font-weight: lighter;
     font-stretch: extra-condensed;
     color: white;
+    margin: 3vw;
+    padding: 10px 30px 14px;
 }
 
-.squiggle {
-    width: 150px;
+.header .open {
+    /* background: yellow; */
+    background-image: url("open1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .cv {
@@ -33,7 +39,9 @@ p {
     background: rgba(255, 255, 255, 0.7);
 }
 
-.cv p {
+.cv a {
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 36px;
     color: black;
     font-stretch: normal;
