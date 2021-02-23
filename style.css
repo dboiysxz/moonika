@@ -1,3 +1,23 @@
+@font-face {
+font-family: "AUTHENTICSans60";
+src: url("fonts/AUTHENTICSans-60.woff") format("woff")
+}
+
+@font-face {
+font-family: "AUTHENTICSans90";
+src: url("fonts/AUTHENTICSans-90.woff") format("woff")
+}
+
+@font-face {
+font-family: "AUTHENTICSansC60";
+src: url("fonts/AUTHENTICSans-Condensed-60.woff") format("woff")
+}
+
+@font-face {
+font-family: "AUTHENTICSansC130";
+src: url("fonts/AUTHENTICSans-Condensed-130.woff") format("woff")
+}
+
 * {
     margin: 0;
 }
@@ -6,29 +26,46 @@ body {
     background: black;
 }
 
-.header {
-    width: 90%;
-    position: fixed;
+a {
+    text-decoration: none;
+    color: black;
+    font-family: AUTHENTICSansC130;
 }
 
-.listed-jobs {
-    top: 200px;
-    position: fixed;
+a:hover {
+    color: yellow;
 }
+
+b {
+    font-family: AUTHENTICSansC130, Arial, sans-serif;
+}
+
+.semibold {
+    font-family: AUTHENTICSansC60;
+}
+
+.header {
+    width: 90%;
+    /* position: fixed; */
+}
+
+/* .listed-jobs {
+    bottom: 0;
+} */
 
 .item:hover {
     color: yellow;
 }
 
-span {
+.header span {
     list-style: none;
     font-size: 46px;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: AUTHENTICSansC60,Arial, sans-serif;
     font-weight: lighter;
     font-stretch: extra-condensed;
     color: white;
     margin: 3vw;
-    padding: 10px 30px 14px;
+    padding: 10px 35px 16px;
 }
 
 .header .open {
@@ -38,7 +75,29 @@ span {
     position: relative;
 }
 
-.cv {
+.cv span {
+    margin: 0;
+    padding: 15px 20px 15px;
+}
+
+.cv .open2 {
+    background-image: url("img/open2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.listed-jobs span {
+    list-style: none;
+    font-size: 46px;
+    font-family: AUTHENTICSansC60, Arial, sans-serif;
+    font-weight: lighter;
+    color: white;
+    margin: 3vw;
+    padding: 10px 30px 14px;
+}
+
+.cv-button {
     position: absolute;
     top: 8px;
     right: 1vw;
@@ -48,12 +107,41 @@ span {
     background: rgba(255, 255, 255, 0.7);
 }
 
-.cv a {
+.cv-button a {
     text-decoration: none;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: AUTHENTICSans, Arial, sans-serif;
     font-size: 36px;
     color: black;
     font-stretch: normal;
+}
+
+.cv-container {
+    display: none;
+    top: 8px;
+    padding: 0 2rem;
+    position: fixed;
+    z-index: 1;
+}
+
+.active {
+    display: block;
+}
+.cv {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    width: 90%;
+    position: fixed;
+    font-family: AUTHENTICSansC60, Arial, sans-serif;
+    font-size: 2.5rem;
+}
+
+.cv p {
+    margin: 1rem auto 1rem;
+    width: 90%;
+}
+
+.center-align {
+    text-align: center;
 }
 
 .vimeo-container {
@@ -61,7 +149,7 @@ span {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  position: relative;
+  position: fixed;
   z-index: -2;
 }
 iframe {
