@@ -46,12 +46,146 @@ b {
 
 .header {
     width: 90%;
-    /* position: fixed; */
 }
 
-/* .listed-jobs {
-    bottom: 0;
-} */
+.item1 {
+    -webkit-animation: 6s ease 0s normal forwards 1 fadein;
+    animation: 6s ease 0s normal forwards 1 fadein;
+
+}
+
+.item2 {
+    -webkit-animation: 7s ease 0s normal forwards 1 fadein;
+    animation: 7s ease 0s normal forwards 1 fadein;
+
+}
+
+.item3 {
+    -webkit-animation: 8s ease 0s normal forwards 1 fadein;
+    animation: 8s ease 0s normal forwards 1 fadein;
+}
+
+.item4 {
+    -webkit-animation: 9s ease 0s normal forwards 1 fadein;
+    animation: 9s ease 0s normal forwards 1 fadein;
+}
+
+.item5 {
+    -webkit-animation: 10s ease 0s normal forwards 1 fadein;
+    animation: 10s ease 0s normal forwards 1 fadein;
+}
+
+.item6 {
+    -webkit-animation: 11s ease 0s normal forwards 1 fadein;
+    animation: 11s ease 0s normal forwards 1 fadein;
+}
+
+.item7 {
+    -webkit-animation: 12s ease 0s normal forwards 1 fadein;
+    animation: 12s ease 0s normal forwards 1 fadein;
+}
+
+.item8 {
+    -webkit-animation: 13s ease 0s normal forwards 1 fadein;
+    animation: 13s ease 0s normal forwards 1 fadein;
+}
+
+.item9 {
+    -webkit-animation: 14s ease 0s normal forwards 1 fadein;
+    animation: 14s ease 0s normal forwards 1 fadein;
+}
+
+.item10 {
+    -webkit-animation: 15s ease 0s normal forwards 1 fadein;
+    animation: 15s ease 0s normal forwards 1 fadein;
+}
+
+.item11 {
+    -webkit-animation: 16s ease 0s normal forwards 1 fadein;
+    animation: 16s ease 0s normal forwards 1 fadein;
+}
+
+.item12 {
+    -webkit-animation: 17s ease 0s normal forwards 1 fadein;
+    animation: 17s ease 0s normal forwards 1 fadein;
+}
+
+.item13 {
+    -webkit-animation: 18s ease 0s normal forwards 1 fadein;
+    animation: 18s ease 0s normal forwards 1 fadein;
+}
+
+.item14 {
+    -webkit-animation: 19s ease 0s normal forwards 1 fadein;
+    animation: 19s ease 0s normal forwards 1 fadein;
+}
+
+.item15 {
+    -webkit-animation: 20s ease 0s normal forwards 1 fadein;
+    animation: 20s ease 0s normal forwards 1 fadein;
+}
+
+.item16 {
+    -webkit-animation: 21s ease 0s normal forwards 1 fadein;
+    animation: 21s ease 0s normal forwards 1 fadein;
+}
+
+.item17 {
+    -webkit-animation: 22s ease 0s normal forwards 1 fadein;
+    animation: 22s ease 0s normal forwards 1 fadein;
+}
+
+.item18 {
+    -webkit-animation: 23s ease 0s normal forwards 1 fadein;
+    animation: 23s ease 0s normal forwards 1 fadein;
+}
+
+.item19 {
+    -webkit-animation: 24s ease 0s normal forwards 1 fadein;
+    animation: 24s ease 0s normal forwards 1 fadein;
+}
+
+.item20 {
+    -webkit-animation: 25s ease 0s normal forwards 1 fadein;
+    animation: 25s ease 0s normal forwards 1 fadein;
+}
+
+.item21 {
+    -webkit-animation: 26s ease 0s normal forwards 1 fadein;
+    animation: 26s ease 0s normal forwards 1 fadein;
+}
+
+.item22 {
+    -webkit-animation: 27s ease 0s normal forwards 1 fadein;
+    animation: 27s ease 0s normal forwards 1 fadein;
+}
+
+.item23 {
+    -webkit-animation: 28s ease 0s normal forwards 1 fadein;
+    animation: 28s ease 0s normal forwards 1 fadein;
+}
+
+.item24 {
+    -webkit-animation: 29s ease 0s normal forwards 1 fadein;
+    animation: 29s ease 0s normal forwards 1 fadein;
+}
+
+.item25 {
+    -webkit-animation: 30s ease 0s normal forwards 1 fadein;
+    animation: 30s ease 0s normal forwards 1 fadein;
+}
+
+@keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
 
 .item:hover {
     color: yellow;
@@ -85,6 +219,11 @@ b {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+}
+
+.listed-jobs {
+    margin: 0 3vw 0;
+    padding: 0 35px 0;
 }
 
 .listed-jobs span {
@@ -126,6 +265,7 @@ b {
 .active {
     display: block;
 }
+
 .cv {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
@@ -152,6 +292,7 @@ b {
   position: fixed;
   z-index: -2;
 }
+
 iframe {
   box-sizing: border-box;
   width: 177.77777778vh;
