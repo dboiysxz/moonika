@@ -93,20 +93,22 @@ a:hover {
     width: 60px;
     height: 50px;
     display: flex;
+    position: fixed;
+    right: 0;
     align-items: center;
     justify-content: center;
     z-index: 2;
 }
 
 .cv-button:hover {
-    background: gray;
+    background: rgba(200, 200, 200, 1);
 }
 
 .cv-button a {
     font-family: "Authentic";
     font-weight: bold;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 2rem;
     padding-top: 8px;
     color: black;
 }
@@ -163,7 +165,6 @@ a:hover {
 
 /* Job items + animation */
 .listed-jobs {
-    /* height: 100%; */
     line-height: 3rem;
     padding: 10vh 4vw 0;
 }
@@ -189,7 +190,6 @@ a:hover {
 }
 
 
-
 @media (max-width: 1000px) {
     html {
         font-size: 1.7rem;
@@ -213,5 +213,25 @@ a:hover {
 
     .job-item {
         font-size: 1.5rem;
+    }
+
+    .cv-button {
+        width: 170px;
+        height: 150px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.3);
+        margin: 1.5rem;
+    }
+
+    .cv-button a {
+        font-size: 3rem;
+        color: yellow;
+    }
+
+    .cv-button:hover {
+        background: rgba(200, 200, 200, 0.5);
     }
 }
