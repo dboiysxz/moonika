@@ -52,6 +52,8 @@ a:hover {
 /* Wrapper */
 .wrapper {
     height: 100vh;
+    background-image: url("img/julius.jpg");
+    background-size: cover;
 }
 
 /* Header */
