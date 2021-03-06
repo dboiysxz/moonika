@@ -1,71 +1,71 @@
 @font-face {
-font-family: "AUTHENTICSans60";
-src: url("fonts/AUTHENTICSans-60.woff") format("woff")
+font-family: "Authentic";
+font-weight: normal;
+src: url("fonts/AUTHENTICSans-60.woff") format("woff");
 }
 
 @font-face {
-font-family: "AUTHENTICSans90";
-src: url("fonts/AUTHENTICSans-90.woff") format("woff")
+font-family: "Authentic";
+font-weight: bold;
+src: url("fonts/AUTHENTICSans-90.woff") format("woff");
 }
 
 @font-face {
-font-family: "AUTHENTICSansC60";
-src: url("fonts/AUTHENTICSans-Condensed-60.woff") format("woff")
+font-family: "Authentic Condensed";
+font-weight: normal;
+src: url("fonts/AUTHENTICSans-Condensed-60.woff") format("woff");
 }
 
 @font-face {
-font-family: "AUTHENTICSansC130";
-src: url("fonts/AUTHENTICSans-Condensed-130.woff") format("woff")
+font-family: "Authentic Condensed";
+font-weight: bold;
+src: url("fonts/AUTHENTICSans-Condensed-130.woff") format("woff");
 }
 
 * {
     margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
+    font-family: "Authentic", Arial, Helvetica, sans-serif;
     background: black;
 }
 
 a {
     text-decoration: none;
     color: black;
-    font-family: AUTHENTICSansC130;
+    font-family: "Authentic Condensed";
 }
 
 a:hover {
     color: yellow;
 }
 
-b {
-    font-family: AUTHENTICSansC130, Arial, sans-serif;
-}
-
 .semibold {
-    font-family: AUTHENTICSansC60;
+    font-family: "Authentic";
 }
 
-.header {
-    width: 90%;
-    /* position: fixed; */
+/* Wrapper */
+.wrapper {
+    height: 100vh;
 }
 
-/* .listed-jobs {
-    bottom: 0;
-} */
-
-.item:hover {
-    color: yellow;
+/* Header */
+.header-button-wrapper {
+    display: flex;
 }
 
 .header span {
     list-style: none;
-    font-size: 46px;
-    font-family: AUTHENTICSansC60,Arial, sans-serif;
-    font-weight: lighter;
-    font-stretch: extra-condensed;
+    font-size: 3rem;
+    font-family: "Authentic Condensed", Arial, sans-serif;
     color: white;
-    margin: 3vw;
-    padding: 10px 35px 16px;
+    margin: 2vw;
+    padding: 10px 36px 16px;
 }
 
 .header .open {
@@ -75,64 +75,68 @@ b {
     position: relative;
 }
 
-.cv span {
-    margin: 0;
-    padding: 15px 20px 15px;
-}
-
-.cv .open2 {
-    background-image: url("img/open2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.listed-jobs span {
-    list-style: none;
-    font-size: 46px;
-    font-family: AUTHENTICSansC60, Arial, sans-serif;
-    font-weight: lighter;
+.header a {
     color: white;
-    margin: 3vw;
-    padding: 10px 30px 14px;
 }
 
+/* CV button */
 .cv-button {
-    position: absolute;
-    top: 8px;
-    right: 1vw;
-    margin-left: 10px;
     border-radius: 15px;
+    margin: 10px;
     padding: 3px 7px;
     background: rgba(255, 255, 255, 0.7);
+    width: 60px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.cv-button:hover {
+    background: gray;
 }
 
 .cv-button a {
+    font-family: "Authentic";
+    font-weight: bold;
     text-decoration: none;
-    font-family: AUTHENTICSans, Arial, sans-serif;
     font-size: 36px;
+    padding-top: 8px;
     color: black;
-    font-stretch: normal;
 }
 
+.cv-button:hover a {
+    color: yellow;
+}
+
+/* CV modal */
 .cv-container {
     display: none;
-    top: 8px;
-    padding: 0 2rem;
+    top: 0;
+    left: 0;
     position: fixed;
     z-index: 1;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
 }
 
-.active {
+.cv-container.active {
     display: block;
 }
+
 .cv {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    width: 90%;
-    position: fixed;
-    font-family: AUTHENTICSansC60, Arial, sans-serif;
+    font-family: "Authentic Condensed", Arial, sans-serif;
     font-size: 2.5rem;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .cv p {
@@ -144,22 +148,65 @@ b {
     text-align: center;
 }
 
-.vimeo-container {
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: fixed;
-  z-index: -2;
+.cv .open2 {
+    background-image: url("img/open2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 15px 20px 15px;
 }
-iframe {
-  box-sizing: border-box;
-  width: 177.77777778vh;
-  height: 56.25vw;
-  min-width: 100%;
-  min-height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+/* Job items + animation */
+.listed-jobs {
+    height: 100%;
+    line-height: 3rem;
+    padding: 10vh 4vw;
+}
+
+.job-item {
+    color: white;
+    opacity: 0;
+    font-size: 2rem;
+    font-family: "Authentic Condensed";
+    font-weight: bold;
+    transition: 1s ease-in-out opacity;
+    cursor: default;
+    padding: 0 1rem 0;
+}
+
+.job-item.active {
+    opacity: 1;
+}
+
+.job-item:hover {
+    opacity: 1!important;
+    transition: 0s;
+}
+
+
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 1.7rem;
+    }
+
+    .header {
+        margin-top: 1rem;
+    }
+
+    .header span {
+        padding: 0 1rem;
+    }
+
+    .header span.open {
+        padding: 10px 44px 17px;
+    }
+
+    .listed-jobs {
+        line-height: 1.5rem;
+    }
+
+    .job-item {
+        font-size: 1.5rem;
+    }
 }
