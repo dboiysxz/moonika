@@ -194,7 +194,7 @@ a:hover {
 .listed-jobs {
     line-height: 3rem;
     padding: 10vh 4vw 0;
-    position: fixed;
+    /* position: fixed; */
     z-index: 3;
 }
 
