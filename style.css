@@ -100,7 +100,7 @@ a:hover {
     right: 0;
     align-items: center;
     justify-content: center;
-    z-index: 4;
+    z-index: 5;
 }
 
 .cv-button:hover {
@@ -122,8 +122,8 @@ a:hover {
 
 /* Vimeo embed */
 .vimeo-wrapper {
-    padding: 0 11vw 5vh;
-    margin-top: 5vw;
+    padding: 0 11vw 10vh;
+    margin-top: 4vw;
 }
 
 .vimeo-vid {
@@ -148,7 +148,7 @@ a:hover {
     top: 0;
     left: 0;
     position: fixed;
-    z-index: 3;
+    z-index: 4;
     overflow: auto;
     width: 100%;
     height: 100%;
@@ -194,8 +194,8 @@ a:hover {
 .listed-jobs {
     line-height: 3rem;
     padding: 10vh 4vw 0;
-    /* position: fixed; */
-    z-index: 2;
+    position: fixed;
+    z-index: 3;
 }
 
 .job-item {
