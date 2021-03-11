@@ -65,6 +65,7 @@ a:hover {
 /* Header */
 .header-button-wrapper {
     display: flex;
+    margin: 3vw;
 }
 
 .header span {
@@ -72,8 +73,7 @@ a:hover {
     font-size: 3rem;
     font-family: "Authentic Condensed", Arial, sans-serif;
     color: white;
-    margin: 2vw;
-    padding: 10px 36px 16px;
+    word-spacing: 5rem;
 }
 
 .header .open {
@@ -81,6 +81,7 @@ a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    padding: 10px 36px 16px;
 }
 
 .header a {
@@ -221,16 +222,15 @@ a:hover {
 
 @media (max-width: 1000px) {
     html {
-        font-size: 1.7rem;
     }
 
     .header {
         margin-top: 1rem;
     }
 
-    .header span {
+    /* .header span {
         padding: 0 1rem;
-    }
+    } */
 
     .header span.open {
         padding: 10px 44px 17px;
@@ -242,21 +242,20 @@ a:hover {
 
     .job-item {
         font-size: 1.5rem;
+        display: inline-block;
     }
 
     .cv-button {
-        width: 170px;
-        height: 150px;
         position: fixed;
         bottom: 0;
         right: 0;
-        border-radius: 30px;
+        border-radius: 1rem;
         background: rgba(255, 255, 255, 0.3);
         margin: 1.5rem;
+        padding: 2rem 2.25rem;
     }
 
     .cv-button a {
-        font-size: 3rem;
         color: yellow;
     }
 
@@ -265,6 +264,13 @@ a:hover {
     }
 }
 
-@media (min-width 1500px) {
+.cursor {
+        color: blue;
+        animation: blink 0.5s infinite;
+}
 
+@keyframes blink {
+            0% { opacity: 1 }
+            50% { opacity: 0 }
+            100% { opacity: 1 }
 }
