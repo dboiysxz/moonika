@@ -5,48 +5,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>MOONIKA PÕDERSALU</title>
-        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
 
     </head>
     <body>
-        <div id="hero">
-            <div class="texture">
-            </div>
-
-            <video loop muted autoplay preload="auto" playsinline>
-                <source src="img/bg.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-            </video>
-
-            <div class="caption">
-                 <h1>MOONIKA PÕDERSALU is active in the field of FILM EDITING, but <span id="open">open</span> for <span id="text" data-words="MUSIC VIDEOS,LISTENING YOU OUT,WIPING YOUR TEARS,COMMERCIALS,TAKING “FIX IT IN POST” AS A COMPLIMENT,SHARING MY FOOD WITH YOU,TRAILERS,WORKING SH*T OUT,A COFFEE BREAK,TELEVISION,PROVIDING PSYCHOLOGICAL ASSISTANCE,TAKING YOUR GARBAGE OUT,THEATRE,STARGAZING,SENDING A SCREENSHOT FROM 00:01:26:17,MANAGING POST-PRODUCTION,A WALK,ASSURING YOU ALL IS NOT LOST"></span></h1>
-            </div>
+        <header>
+            <div class="hero-wrapper">
+                 <h1><b>MOONIKA PÕDERSALU</b> is active in the field of <b>FILM EDITING</b>, but <span id="open">open</span> for <b> <span id="text" data-words="MUSIC VIDEOS,LISTENING YOU OUT,WIPING YOUR TEARS,COMMERCIALS,TAKING “FIX IT IN POST” AS A COMPLIMENT,SHARING MY FOOD WITH YOU,TRAILERS,WORKING SH*T OUT,A COFFEE BREAK,TELEVISION,PROVIDING PSYCHOLOGICAL ASSISTANCE,TAKING YOUR GARBAGE OUT,THEATRE,STARGAZING,SENDING A SCREENSHOT FROM 00:01:26:17,MANAGING POST-PRODUCTION,A WALK,ASSURING YOU ALL IS NOT LOST"></span></b></h1>
+                 <video class="video-bg" loop muted autoplay preload="auto" playsinline >
+                     <source src="img/bg.mp4" type="video/mp4">
+                         Your browser does not support the video tag.
+                 </video>
+             </div>
+        </header>
+        <div class="nav-wrapper">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="button cv-button"><a href="javascript:;" onclick="toggleCv()">CV</a></li>
+                    <li class="button showreel-button"><a href="video.html">SHOWREEL</a></li>
+                </ul>
+            </nav>
         </div>
-        <div id="button-wrapper">
-                <div class="button cv">
-                    <a href="javascript:;" onclick="toggleCv()">CV</a>
-                </div>
-                <div class="button showreel">
-                    <a href="video.html">SHOWREEL</a>
-                </div>
-        </div>
-        <div id="curriculum" class="overlay">
-            <div class="cv-container">
-                <div class="cv-text">
-                    <p>Moonika Põdersalu is a freelance film editor based in Tallinn, Estonia. She studied in Baltic Film and Media School (BA) and has been active in the field of film industry since 2015. During the years she has had an opportunity to work with very different forms of storytelling — feature and short films, documentaries, music videos, advertisements. Her resume includes</p>
-                    <p><svg width="80" height="30"><circle cx="50" cy="15" r="15px" fill="black">
-                    </svg>3 full features as editor,<br>
-                    <svg width="80" height="30"><circle cx="50" cy="15" r="15px" fill="black">
-                    </svg>a 130-part interactive film, <br><svg width="80" height="30"><circle cx="50" cy="15" r="15px" fill="black">
-                    </svg>shorts shot on film,<br>
-                    <svg width="80" height="30"><circle cx="50" cy="15" r="15px" fill="black"></svg>a 4-hour-long audio-visual piece that couldn’t be labeled theatre nor film</p>
-                    <p class="center-align">Probably currently working on something<br>
-                    but always open for your mind-bending ideas.</p>
-                    <p class="center-align">Get the full CV from —&#8239;>&nbsp;<a href="#"><span class="open2"><b>HERE</b></span></a>&nbsp;<&#8239;—</p>
-                    <p>write me <span class="semibold">HELLO@KODANIKPOST.XYZ</span> or <br>
-                    call me +372&nbsp;53 496 102<br><br><br></p>
-                </div>
+
+        <div id="curriculum" class="popup">
+            <div class="popup-overlay" onclick="toggleCv()"></div>
+            <div class="cv">
+                <p><b>MOONIKA PÕDERSALU</b> is a freelance <b>FILM EDITOR</b> based in Tallinn, Estonia. She studied in Baltic Film and Media School (<sup>BA</sup>) and has been active in the field of film industry since 2015. During the years she has had an opportunity to work with very different forms of storytelling — <b>FEATURE</b> and <b>SHORT FILMS, DOCUMENTARIES, MUSIC VIDEOS, ADVERTISEMENTS</b>.</p><br>
+                <p>Her resume includes
+                    <ul class="custom-bullet">
+                        <li>3 full features as <b>EDITOR</b>,</li>
+                        <li>a 130-part <b>INTERACTIVE FILM</b>,</li>
+                        <li>shorts shot on film,</li>
+                        <li>a 4-hour-long <b>AUDIO-VISUAL PIECE</b> that couldn’t be labeled theatre nor film.</li>
+                    </ul>
+                </p><br>
+                <p class="u-center">Probably currently working on something<br>
+                but always open for your mind-bending ideas.</p><br>
+                <p class="u-center">Get the full CV from —>&nbsp;<a href="#"><span class="open2"><b>HERE</b></span></a>&nbsp;<—</p><br>
+                <p>write me <span class="semibold">HELLO@KODANIKPOST.XYZ</span> or <br>
+                call me +372&nbsp;53 496 102</p>
             </div>
         </div>
         <script src="js/main.js"></script>
