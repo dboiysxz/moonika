@@ -36,6 +36,14 @@ src: url("../fonts/ApfelGrotezk-Regular.woff") format("woff");
     padding: 0;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /*=================
     TYPOGRAPHY
 =================*/
@@ -145,11 +153,12 @@ header {
 }
 /* BUTTON STYLING */
 .button {
-    border-radius: 0.5em;
-    padding: 0.05em 0.5em 0.15em 0.5em;
+    border-radius: 0.35em;
+    padding: 0.05em 0.2em 0.15em 0.2em;
     background: rgba(255,255,255,0.9);
     font-family: "Apfel Grotezk", Arial, Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    line-height: 1;
     font-weight: normal;
     text-align: center;
     box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
@@ -189,29 +198,33 @@ header {
 
 .cv {
     background: white;
-    border-radius: 0.5em 0.5em 0 0;
-    height: 100%;
+    border-radius: 0.5em;
     width: 100%;
     max-width: 70rem;
-    max-height: 45rem;
+    max-height: 100%;
     overflow-y: scroll;
-    padding: 1.5rem 1.5rem 4rem;
+    padding: 1.5rem;
 
 }
 
 .open2 {
-    background-image: url("../img/open2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    display: inline-block;
     position: relative;
-    padding: 15px 20px 15px;
+}
+.here {
+    background: url('../img/here.svg') center / contain no-repeat;
+    position: absolute;
+    left: -4.1rem;
+    top: -1.1rem;
+    width: 285%;
+    height: 170%;
 }
 
 /*============
     SHOWREEL
 ============*/
 #showreel {
-    background-image: url(../img/blonn.png);
+    background: #000 url('../img/blonn.png') center / cover;
 }
 
 #showreel .video-container {
@@ -239,22 +252,26 @@ header {
 /*================
     MEDIA QUERIES
 ================*/
-
-@media (min-height: 50rem) {
+@media (max-width: 1024px) and (max-height: 1024px) {
     .cv {
-        border-radius: 0.5em;
+        height: 100%;
+        padding-bottom: 4rem;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 425px) {
     h1 {
         font-size: 10vw;
     }
     p,
     .cv ul {
-        font-size: 6.25vw;
+        font-size: 6.75vw;
+    }
+    .here {
+        left: -15vw;
+        top: -3vw;
     }
     .button {
-        font-size: 7vw;
+        font-size: 8vw;
     }
 }
