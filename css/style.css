@@ -76,13 +76,15 @@ a:focus {
     color: yellow;
 }
 
+.open1 a {
+    color: white;
+}
+
 .u-center {
     text-align: center;
 }
 
 /* POP-UP TYPOGRAPHY*/
-
-
 .cv ul {
     font-size: 1.9rem;
     font-family: "Authentic Condensed", Arial, sans-serif;
@@ -94,7 +96,35 @@ a:focus {
     padding-left: 0.3em;
 }
 
+.open1 {
+    background: url('../img/open1.png') center / contain no-repeat;
+    padding: 1em;
+    position: relative;
+}
 
+.easter-video {
+    width: 10px;
+    height: 10px;
+    padding: 1.91em;
+    position: absolute;
+    z-index: 500;
+    display: none;
+    background: url("../img/open.mp4") center / contain no-repeat;
+}
+
+.easter-video.active {
+    display: inline;
+}
+
+.easter-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: -1;
+}
 
 /*============
     LAYOUT
@@ -107,7 +137,7 @@ header {
     min-height: 100vh;
     overflow: hidden;
     background: rgba(0,0,0,0.5);
-    background:url("../img/texture3.png");
+    background:url("../img/texture.png");
 }
 
 .hero-wrapper {
@@ -151,6 +181,7 @@ header {
 .nav-list li:nth-of-type(2) {
     margin-left: auto;
 }
+
 /* BUTTON STYLING */
 .button {
     border-radius: 0.35em;
@@ -197,20 +228,20 @@ header {
 }
 
 .cv {
-    background: white;
+    background: rgba(255,255,255,0.9);
     border-radius: 0.5em;
     width: 100%;
     max-width: 70rem;
     max-height: 100%;
     overflow-y: scroll;
     padding: 1.5rem;
-
 }
 
 .open2 {
     display: inline-block;
     position: relative;
 }
+
 .here {
     background: url('../img/here.svg') center / contain no-repeat;
     position: absolute;
@@ -233,7 +264,7 @@ header {
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    max-width: 70rem;
+    max-width: 85%;
 }
 
 #showreel iframe {
@@ -243,15 +274,44 @@ header {
     width: 100%;
     height: 100%;
 }
+
 #showreel .back-button {
     position: fixed;
     top: 1rem;
     left: 1rem;
     z-index: 40;
 }
+
+ .cursor {
+     color: white;
+     animation: blink 0.5s infinite;
+     font-weight: 400;
+     position: relative;
+     top: -0.2rem;
+ }
+
+ @keyframes blink {
+             0% { opacity: 1 }
+             50% { opacity: 0 }
+             100% { opacity: 1 }
+ }
+
 /*================
     MEDIA QUERIES
 ================*/
+
+@media (max-width: 3440px) and (max-height: 1440px){
+    #showreel .video-container {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 2560px) and (max-width: 1080px){
+    #showreel .video-container {
+        max-width: 150rem;
+    }
+}
+
 @media (max-width: 1024px) and (max-height: 1024px) {
     .cv {
         height: 100%;
@@ -263,15 +323,22 @@ header {
     h1 {
         font-size: 10vw;
     }
+
     p,
     .cv ul {
         font-size: 6.75vw;
     }
+
     .here {
         left: -15vw;
         top: -3vw;
     }
+
     .button {
         font-size: 8vw;
+    }
+
+    .open1 {
+        padding: 0.5em;
     }
 }

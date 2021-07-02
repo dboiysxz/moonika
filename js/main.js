@@ -5,6 +5,14 @@ function toggleCv () {
     document.body.classList.toggle('active')
 }
 
+
+const openvid = document.getElementById('openvid')
+
+function toggleOpenvid () {
+    openvid.classList.toggle('active')
+    document.body.classList.toggle('active')
+}
+
 const textElement = document.getElementById('text')
 const words = textElement.dataset.words.split(',')
 const typingSpeed = 100
