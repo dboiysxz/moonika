@@ -101,7 +101,7 @@ a:focus {
 }
 
 .open1 {
-    background: url('../img/open1.png') center / contain no-repeat;
+    background: url('../img/open1.gif') center / contain no-repeat;
     padding: 1em;
     position: relative;
 }
