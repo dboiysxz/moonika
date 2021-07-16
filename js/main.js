@@ -1,3 +1,6 @@
+
+
+// PS! Brauseris soovitan kasutada "var"-i "const/let" asemel, kuna IE ei toeta consti ja leti
 var isPopupVideoOpened = false;
 
 function togglePopupVideo(state) {
@@ -14,9 +17,13 @@ function closePopupVideo() {
     togglePopupVideo(false)
 }
 
+// kui kasutad window.onloadi, siis saad olla kindel, et HTML on selleks ajaks ära laetud
 window.onload = function(e) {
+
+    // See kuulab kõiki klikke, mida kasutaja lehel teeb
     document.addEventListener('click', function(e) {
         var target = e.target;
+
         if (target.id == 'open-popup-video') {
             openPopupVideo();
         } else if (isPopupVideoOpened) {
@@ -25,20 +32,34 @@ window.onload = function(e) {
     })
 }
 
+// function toggleOpenvid () {
+//     openvid.classList.toggle('active')
+//     document.body.classList.toggle('active')
+// }
+
+
+// const curriculum = document.getElementById('curriculum')
+
 function toggleCv () {
     curriculum.classList.toggle('active')
     document.body.classList.toggle('active')
 }
 
-var textElement = document.getElementById('text')
-var words = textElement.dataset.words.split(',')
-var typingSpeed = 100
-var pauseTime = 2000
-var count = 0
+
+// const openvid = document.getElementById('openvid')
+
+
+
+const textElement = document.getElementById('text')
+const words = textElement.dataset.words.split(',')
+const typingSpeed = 100
+const pauseTime = 2000
+let count = 0
 
 function typeWord(word) {
-   var typeCount = 0
-   var typeInterval = setInterval(() => {
+   let typeCount = 0
+
+   const typeInterval = setInterval(() => {
        if (typeCount <= word.length) {
            textElement.innerHTML = word.slice(0, typeCount) + '<span class="cursor">|</span>'
            typeCount ++
@@ -48,6 +69,7 @@ function typeWord(word) {
                typeWord(nextWord())
            }, pauseTime)
        }
+
    }, typingSpeed)
 }
 
